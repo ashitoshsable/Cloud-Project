@@ -46,4 +46,22 @@ my-courses-backend/
     ```
    npm start
     ```
-   The server will run on http://localhost:3000 by default. 
+   The server will run on http://localhost:3000 by default.
+
+## API Endpoints
+
+| Method | Endpoint           | Description                       |
+|--------|---------------------|-----------------------------------|
+| GET    | `/api/courses`      | Retrieve all courses             |
+| GET    | `/api/course/:id`   | Retrieve a specific course by ID |
+| POST   | `/api/course`       | Add a new course                 |
+| PUT    | `/api/course/:id`   | Update a course by ID            |
+| DELETE | `/api/course/:id`   | Delete a course by ID            |
+
+## Project Dependencies
+
+- Express - Fast, unopinionated, minimalist web framework for Node.js
+- Mongoose - MongoDB object modeling tool designed to work in an asynchronous environment
+- dotenv - Loads environment variables from a .env file
+- Nodemon - Development utility that monitors for any changes in your source and automatically restarts the server
+
