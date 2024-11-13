@@ -10,13 +10,14 @@ This is a Node.js and Express backend application that provides a REST API for m
 
 ## Project Structure
 
+```
 my-courses-backend/
 ├── server.js          # Main server file
 ├── models/
 │   └── Course.js      # Mongoose model for course data
 ├── routes/
     └── courseRoutes.js # API routes for course operations
-
+```
 
 ## Getting Started
 
@@ -29,9 +30,20 @@ my-courses-backend/
 ### Installation
 
 1. Clone the repository:
-   ```bash
+   ```
    git clone https://github.com/yourusername/my-courses-backend.git
    cd my-courses-backend
    ```
-
-
+2. Install dependencies:
+    ```
+    npm install
+    ```
+3. Create a .env file in the root directory with the following variable:
+    ```
+    MONGO_URI=your-mongodb-connection-string
+    ```
+4. Start the server:
+    ```
+   npm start
+    ```
+   The server will run on http://localhost:3000 by default. 
