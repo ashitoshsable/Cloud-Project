@@ -1,8 +1,10 @@
+import performance from '../assets/performance.png';
+
 export default function Bento() {
     return (
       <div className="bg-gray-50 py-24 sm:py-32">
         <div className="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
-          <h2 className="text-center text-base/7 font-semibold text-indigo-600">Deploy faster</h2>
+          <h2 className="text-center text-base/7 font-semibold text-yellow-600">Track Courses Easily</h2>
           <p className="mx-auto mt-2 max-w-lg text-balance text-center text-4xl font-semibold tracking-tight text-gray-950 sm:text-5xl">
             Everything you need to deploy your app
           </p>
@@ -42,7 +44,7 @@ export default function Bento() {
                 <div className="flex flex-1 items-center justify-center px-8 max-lg:pb-12 max-lg:pt-10 sm:px-10 lg:pb-2">
                   <img
                     className="w-full max-lg:max-w-xs"
-                    src="https://tailwindui.com/plus/img/component-images/bento-03-performance.png"
+                    src={performance}
                     alt=""
                   />
                 </div>

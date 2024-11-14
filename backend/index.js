@@ -3,6 +3,7 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const mongoose = require('mongoose');
 const courseRoutes = require('./routes/courseRoutes');
+const authRoutes = require('./routes/authRoutes');
 require('dotenv').config();
 
 const app = express();
@@ -19,6 +20,7 @@ mongoose.connect(MONGO_URI).then(() => console.log("MongoDB connected"))
 
 // Routes
 app.use('/api', courseRoutes);
+app.use('/api/auth', authRoutes);
 
 // Start the server
 app.listen(PORT, () => {

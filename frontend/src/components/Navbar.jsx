@@ -5,6 +5,7 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import logo from '../assets/logo.png';
 
 const navigation = [
+    { name: 'Home', href: '/' },
     { name: 'View Courses', href: '/view-courses' },
     { name: 'Manage Courses', href: '/manage-courses' },
     { name: 'Track Enrollment', href: '/track-enrollment' },
@@ -14,7 +15,7 @@ export function Navbar(){
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
     return(
         <>
-            <header className="absolute inset-x-0 top-0 z-50">
+            <header className="absolute inset-x-0 top-0 z-50 ">
             <nav aria-label="Global" className="flex items-center justify-between p-6 lg:px-8">
             <div className="flex lg:flex-1">
                 <a href="/" className="-m-1.5 p-1.5">

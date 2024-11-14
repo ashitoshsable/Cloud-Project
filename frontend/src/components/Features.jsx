@@ -2,19 +2,19 @@ import { CloudArrowUpIcon, LockClosedIcon, ServerIcon } from '@heroicons/react/2
 
 const features = [
   {
-    name: 'Push to deploy.',
+    name: 'Instant updates.',
     description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+      'Changes are instantly available to you, allowing for real-time adjustments. Each course update is just a click away, ensuring you’re always up-to-date.',
     icon: CloudArrowUpIcon,
   },
   {
-    name: 'SSL certificates.',
-    description: 'Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo.',
+    name: 'Protected access.',
+    description: 'Enjoy secure and private course management. With built-in data encryption, your information remains safe and accessible only to you.',
     icon: LockClosedIcon,
   },
   {
-    name: 'Database backups.',
-    description: 'Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.',
+    name: 'Automated course backups.',
+    description: 'Your courses are backed up for safekeeping. Never lose track of your academic records.',
     icon: ServerIcon,
   },
 ]
@@ -26,19 +26,18 @@ export default function Features() {
         <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
           <div className="lg:pr-8 lg:pt-4">
             <div className="lg:max-w-lg">
-              <h2 className="text-base/7 font-semibold text-indigo-600">Deploy faster</h2>
+              <h2 className="text-base/7 font-semibold text-yellow-600">Manage your learning journey with ease.</h2>
               <p className="mt-2 text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
-                A better workflow
+                Streamline Learning
               </p>
               <p className="mt-6 text-lg/8 text-gray-600">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque,
-                iste dolor cupiditate blanditiis ratione.
+              With Skills, keep track of your entire academic journey in one place. Simplify course organization with easy-to-use features that save you time and effort.
               </p>
               <dl className="mt-10 max-w-xl space-y-8 text-base/7 text-gray-600 lg:max-w-none">
                 {features.map((feature) => (
                   <div key={feature.name} className="relative pl-9">
                     <dt className="inline font-semibold text-gray-900">
-                      <feature.icon aria-hidden="true" className="absolute left-1 top-1 size-5 text-indigo-600" />
+                      <feature.icon aria-hidden="true" className="absolute left-1 top-1 size-5 text-yellow-600" />
                       {feature.name}
                     </dt>{' '}
                     <dd className="inline">{feature.description}</dd>

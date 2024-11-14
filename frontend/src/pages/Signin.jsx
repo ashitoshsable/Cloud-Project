@@ -1,9 +1,9 @@
 import React from "react";
-import SignupComponent from "../components/SignupComponent";
+import SigninComponent from "../components/SigninComponent";
 export default function Signup() {
   return (
     <>
-      <SignupComponent />
+      <SigninComponent />
     </>
   )
 }
