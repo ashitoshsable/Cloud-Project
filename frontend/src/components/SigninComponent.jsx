@@ -110,6 +110,13 @@ export default function SigninComponent() {
                 Login
               </button>
             </div>
+
+            <p className="mt-10 text-center text-sm text-gray-500">
+              Not a user?{' '}
+              <a href="/signup" className="font-semibold text-blue-950 hover:text-yellow-600">
+                Sign Up here!
+              </a>
+            </p>
           </form>
         </div>
       </div>

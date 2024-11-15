@@ -8,7 +8,7 @@ const User = require('../models/User');
 // Get all courses
 router.get('/courses', async (req, res) => {
     try {
-        const courses = await Course.find();
+        const courses = await Course.find().populate('creator', 'name'); // Populate creator's name
         res.json(courses);
     } catch (error) {
         res.status(500).send('Error retrieving courses');
@@ -40,6 +40,7 @@ router.post('/course', authMiddleware, async (req, res) => {
 
         res.status(201).json(newCourse);
     } catch (error) {
+        console.log("Hit");
         res.status(400).send('Error creating course');
     }
 });
@@ -109,6 +110,25 @@ router.get('/my-courses', authMiddleware, async (req, res) => {
         res.status(500).send('Error retrieving user-created courses');
     }
 });
+
+
+// Endpoint to get enrolled courses for a specific user
+router.get('/enrolled-courses', authMiddleware, async (req, res) => {
+    try {
+        const userId = req.user.id;
+        const user = await User.findById(userId).populate('enrolledCourses');
+
+        if (!user) {
+            return res.status(404).json({ message: 'User not found' });
+        }
+
+        res.status(200).json(user.enrolledCourses);
+    } catch (error) {
+        console.error('Error fetching enrolled courses:', error);
+        res.status(500).json({ message: 'Error retrieving enrolled courses' });
+    }
+});
+
 
 
 // Get users enrolled in a specific course

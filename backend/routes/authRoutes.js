@@ -6,7 +6,7 @@ const jwt = require('jsonwebtoken');
 const User = require('../models/User');
 
 // Secret key for JWT
-const JWT_SECRET = 'CloudProject'; // Replace with an environment variable for production
+const JWT_SECRET = 'CloudProject';
 
 // Signup route
 router.post('/signup', async (req, res) => {

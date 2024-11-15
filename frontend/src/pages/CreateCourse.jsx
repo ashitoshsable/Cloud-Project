@@ -1,39 +1,14 @@
-import { useEffect, useState } from 'react';
-import { FooterSection } from "../components/FooterSection";
+import { useState, useEffect } from 'react';
 import { Navbar } from "../components/Navbar";
-import { TrackEnrollmentCard } from "../components/TrackEnrollmentCard";
+import { FormCreateCourse } from "../components/FormCreateCourse";
+import { FooterSection } from "../components/FooterSection";
 
-export default function TrackEnrollment() {
-  const [courses, setCourses] = useState([]);
+export function CreateCourse() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   useEffect(() => {
     const token = localStorage.getItem('token'); // Retrieve the token from localStorage
     setIsLoggedIn(!!token); // Check if the user is logged in
-
-    if (token) {
-      async function fetchCourses() {
-        try {
-          const response = await fetch('http://localhost:3000/api/enrolled-courses/', {
-            headers: {
-              'Authorization': `Bearer ${token}`, // Include the token in the Authorization header
-              'Content-Type': 'application/json'
-            }
-          });
-
-          if (!response.ok) {
-            throw new Error('Failed to fetch courses');
-          }
-
-          const data = await response.json();
-          setCourses(data); // Set the fetched data
-        } catch (error) {
-          console.error('Error fetching courses:', error);
-        }
-      }
-
-      fetchCourses();
-    }
   }, []);
 
   if (!isLoggedIn) {
@@ -73,12 +48,9 @@ export default function TrackEnrollment() {
   return (
     <>
       <Navbar />
-      <div className="flex flex-col items-center pt-28 pb-4 bg-gray-50 min-h-screen space-y-6">
-        {courses.map((course) => (
-          <TrackEnrollmentCard key={course._id} title={course.title} details={course.details} />
-        ))}
-      </div>
-      <FooterSection />
+      <FormCreateCourse />
+      {/* Uncomment the footer section if required */}
+      {/* <FooterSection /> */}
     </>
   );
 }
