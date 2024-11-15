@@ -1,4 +1,4 @@
-# My Courses Backend
+<!-- # My Courses Backend
 
 This is a Node.js and Express backend application that provides a REST API for managing course data. Originally designed to store data in a local file, this backend now integrates with MongoDB using Mongoose for persistent data storage.
 
@@ -64,4 +64,4 @@ my-courses-backend/
 - Mongoose - MongoDB object modeling tool designed to work in an asynchronous environment
 - dotenv - Loads environment variables from a .env file
 - Nodemon - Development utility that monitors for any changes in your source and automatically restarts the server
-
+ -->

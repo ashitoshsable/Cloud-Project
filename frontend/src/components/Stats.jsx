@@ -1,7 +1,7 @@
 const stats = [
-    { id: 1, name: 'Transactions every 24 hours', value: '44 million' },
-    { id: 2, name: 'Assets under holding', value: '$119 trillion' },
-    { id: 3, name: 'New users annually', value: '46,000' },
+    { id: 1, name: 'Users all over the World', value: '44 Lakh+' },
+    { id: 2, name: 'Testimonials from all age groups', value: '12 - 80 age' },
+    { id: 3, name: 'Monthly Users', value: '2 Lakh+' },
   ]
   
   export default function Stats() {

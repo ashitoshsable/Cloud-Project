@@ -1,4 +1,5 @@
 import performance from '../assets/performance.png';
+import phonephoto from "../assets/phoneimage.png"
 
 export default function Bento() {
     return (
@@ -6,7 +7,7 @@ export default function Bento() {
         <div className="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
           <h2 className="text-center text-base/7 font-semibold text-yellow-600">Track Courses Easily</h2>
           <p className="mx-auto mt-2 max-w-lg text-balance text-center text-4xl font-semibold tracking-tight text-gray-950 sm:text-5xl">
-            Everything you need to deploy your app
+            Everything you need to start learning journey.
           </p>
           <div className="mt-10 grid gap-4 sm:mt-16 lg:grid-cols-3 lg:grid-rows-2">
             <div className="relative lg:row-span-2">
@@ -17,14 +18,14 @@ export default function Bento() {
                     Mobile friendly
                   </p>
                   <p className="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">
-                    Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo.
+                  Responsive design ensures optimal viewing and usability on mobile devices. Seamless interactions enhance the user experience across all screens.
                   </p>
                 </div>
                 <div className="relative min-h-[30rem] w-full grow [container-type:inline-size] max-lg:mx-auto max-lg:max-w-sm">
                   <div className="absolute inset-x-10 bottom-0 top-10 overflow-hidden rounded-t-[12cqw] border-x-[3cqw] border-t-[3cqw] border-gray-700 bg-gray-900 shadow-2xl">
                     <img
                       className="size-full object-cover object-top"
-                      src="https://tailwindui.com/plus/img/component-images/bento-03-mobile-friendly.png"
+                      src={phonephoto}
                       alt=""
                     />
                   </div>
@@ -38,7 +39,7 @@ export default function Bento() {
                 <div className="px-8 pt-8 sm:px-10 sm:pt-10">
                   <p className="mt-2 text-lg font-medium tracking-tight text-gray-950 max-lg:text-center">Performance</p>
                   <p className="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit maiores impedit.
+                  Structured practice boosts skill acquisition and accelerates comprehension rates.
                   </p>
                 </div>
                 <div className="flex flex-1 items-center justify-center px-8 max-lg:pb-12 max-lg:pt-10 sm:px-10 lg:pb-2">
@@ -57,7 +58,7 @@ export default function Bento() {
                 <div className="px-8 pt-8 sm:px-10 sm:pt-10">
                   <p className="mt-2 text-lg font-medium tracking-tight text-gray-950 max-lg:text-center">Security</p>
                   <p className="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">
-                    Morbi viverra dui mi arcu sed. Tellus semper adipiscing suspendisse semper morbi.
+                  Continuous improvement drives mastery and fosters deeper understanding.
                   </p>
                 </div>
                 <div className="flex flex-1 items-center [container-type:inline-size] max-lg:py-6 lg:pb-2">
@@ -78,7 +79,7 @@ export default function Bento() {
                     Powerful APIs
                   </p>
                   <p className="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">
-                    Sit quis amet rutrum tellus ullamcorper ultricies libero dolor eget sem sodales gravida.
+                   Efficient routing handles requests and responses seamlessly across the app.
                   </p>
                 </div>
                 <div className="relative min-h-[30rem] w-full grow">
@@ -86,9 +87,9 @@ export default function Bento() {
                     <div className="flex bg-gray-800/40 ring-1 ring-white/5">
                       <div className="-mb-px flex text-sm/6 font-medium text-gray-400">
                         <div className="border-b border-r border-b-white/20 border-r-white/10 bg-white/5 px-4 py-2 text-white">
-                          NotificationSetting.jsx
+                          CreateCourse.jsx
                         </div>
-                        <div className="border-r border-gray-600/10 px-4 py-2">App.jsx</div>
+                        <div className="border-r border-gray-600/10 px-4 py-2">ManageCourse.jsx</div>
                       </div>
                     </div>
                     <div className="px-6 pb-14 pt-6">{/* Your code example */}</div>
