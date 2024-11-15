@@ -40,7 +40,6 @@ router.post('/course', authMiddleware, async (req, res) => {
 
         res.status(201).json(newCourse);
     } catch (error) {
-        console.log("Hit");
         res.status(400).send('Error creating course');
     }
 });
@@ -130,7 +129,6 @@ router.get('/enrolled-courses', authMiddleware, async (req, res) => {
 });
 
 router.delete('/unenroll/:courseId', authMiddleware, async (req, res) => {
-    console.log("Hit");
     const { courseId } = req.params;
     const userId = req.user.id; // Assuming the user's ID is available in req.user.id from the auth middleware
 

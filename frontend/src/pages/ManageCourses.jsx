@@ -7,7 +7,7 @@ function RestrictedAccessCard() {
   return (
     <main className="flex items-center justify-center min-h-screen bg-white">
       <div className="text-center max-w-xl mx-auto">
-        <p className="text-base font-semibold text-indigo-600">Restricted</p>
+        <p className="text-base font-semibold text-yellow-600">Restricted</p>
         <h1 className="mt-4 text-5xl font-bold tracking-tight text-gray-900 sm:text-7xl">
           This operation requires a signup
         </h1>
@@ -17,13 +17,13 @@ function RestrictedAccessCard() {
         <div className="mt-10 flex items-center justify-center gap-x-6">
           <a
             href="/signup"
-            className="rounded-md bg-indigo-600 px-5 py-3 text-sm font-semibold text-white shadow-md hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-offset-2"
+            className="rounded-md bg-blue-950 px-5 py-3 text-sm font-semibold text-white shadow-md hover:bg-yellow-500 focus:outline-none focus:ring-2 focus:ring-yellow-600 focus:ring-offset-2"
           >
             Signup
           </a>
           <a
             href="/support"
-            className="text-sm font-semibold text-gray-900 hover:text-indigo-600"
+            className="text-sm font-semibold text-gray-900 hover:text-yellow-600"
           >
             Contact support <span aria-hidden="true">&rarr;</span>
           </a>
@@ -33,6 +33,26 @@ function RestrictedAccessCard() {
   );
 }
 
+function NoCoursesCard() {
+  return (
+    <div className="text-center max-w-xl mx-auto">
+      <h2 className="text-2xl font-semibold text-gray-900">
+        You haven't created any courses yet.
+      </h2>
+      <p className="mt-4 text-lg text-gray-500">
+        Start creating your courses and share your knowledge with others!
+      </p>
+      <div className="mt-6">
+        <a
+          href="/create-course"
+          className="inline-block rounded-md bg-blue-950 px-5 py-3 text-sm font-semibold text-white shadow-md hover:bg-yellow-500 focus:outline-none focus:ring-2 focus:ring-yellow-600 focus:ring-offset-2"
+        >
+          Create Your First Course
+        </a>
+      </div>
+    </div>
+  );
+}
 
 export default function ManageCourses() {
   const [courses, setCourses] = useState([]);
@@ -77,9 +97,13 @@ export default function ManageCourses() {
     <>
       <Navbar />
       <div className="flex flex-col items-center pt-28 pb-4 bg-gray-50 min-h-screen space-y-6">
-        {courses.map((course) => (
-          <ManageCourseCard key={course._id} title={course.title} details={course.details} id={course._id}/>
-        ))}
+        {courses.length === 0 ? (
+          <NoCoursesCard />
+        ) : (
+          courses.map((course) => (
+            <ManageCourseCard key={course._id} title={course.title} details={course.details} id={course._id} />
+          ))
+        )}
       </div>
       <FooterSection />
     </>

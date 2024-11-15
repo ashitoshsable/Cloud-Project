@@ -17,7 +17,7 @@ export function CreateCourse() {
         <Navbar />
         <main className="flex items-center justify-center min-h-screen bg-white">
           <div className="text-center max-w-xl mx-auto">
-            <p className="text-base font-semibold text-indigo-600">Restricted</p>
+            <p className="text-base font-semibold text-yellow-600">Restricted</p>
             <h1 className="mt-4 text-5xl font-bold tracking-tight text-gray-900 sm:text-7xl">
               This operation requires a signup
             </h1>
@@ -27,13 +27,13 @@ export function CreateCourse() {
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <a
                 href="/signup"
-                className="rounded-md bg-indigo-600 px-5 py-3 text-sm font-semibold text-white shadow-md hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-offset-2"
+                className="rounded-md bg-blue-950 px-5 py-3 text-sm font-semibold text-white shadow-md hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-yellow-600 focus:ring-offset-2"
               >
                 Signup
               </a>
               <a
                 href="/support"
-                className="text-sm font-semibold text-gray-900 hover:text-indigo-600"
+                className="text-sm font-semibold text-gray-900 hover:text-yellow-600"
               >
                 Contact support <span aria-hidden="true">&rarr;</span>
               </a>

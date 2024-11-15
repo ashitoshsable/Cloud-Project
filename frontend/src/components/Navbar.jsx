@@ -25,7 +25,7 @@ export function Navbar() {
     const handleLogout = () => {
         localStorage.removeItem('token'); // Clear token from storage
         setIsLoggedIn(false);
-        window.location.href = '/signin'; // Redirect to login page
+        window.location.href = '/'; // Redirect to login page
     };
 
     return (

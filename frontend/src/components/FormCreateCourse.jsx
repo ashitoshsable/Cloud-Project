@@ -27,7 +27,7 @@ export function FormCreateCourse() {
 
       if (response.ok) {
         setMessage('Course created successfully');
-        navigate('/'); // Redirect to home page
+        navigate('/view-courses'); // Redirect to home page
       } else {
         setMessage(data.message || 'Course creation failed');
       }
