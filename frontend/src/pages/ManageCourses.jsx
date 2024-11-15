@@ -78,7 +78,7 @@ export default function ManageCourses() {
       <Navbar />
       <div className="flex flex-col items-center pt-28 pb-4 bg-gray-50 min-h-screen space-y-6">
         {courses.map((course) => (
-          <ManageCourseCard key={course._id} title={course.title} details={course.details} />
+          <ManageCourseCard key={course._id} title={course.title} details={course.details} id={course._id}/>
         ))}
       </div>
       <FooterSection />

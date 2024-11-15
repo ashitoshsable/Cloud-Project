@@ -7,6 +7,7 @@ import ViewCourses from "./pages/ViewCourses";
 import ManageCourses from "./pages/ManageCourses";
 import TrackEnrollment from "./pages/TrackEnrollment";
 import { CreateCourse } from "./pages/CreateCourse";
+import { EditCourse } from "./pages/EditCourse";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/manage-courses" element={<ManageCourses />} />
         <Route path="/track-enrollment" element={<TrackEnrollment />} />
         <Route path="/create-course" element={<CreateCourse />} />
+        <Route path="/edit-course/:courseId" element={<EditCourse />} />
       </Routes>
     </Router>
   );

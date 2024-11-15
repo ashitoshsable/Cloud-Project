@@ -129,6 +129,44 @@ router.get('/enrolled-courses', authMiddleware, async (req, res) => {
     }
 });
 
+router.delete('/unenroll/:courseId', authMiddleware, async (req, res) => {
+    console.log("Hit");
+    const { courseId } = req.params;
+    const userId = req.user.id; // Assuming the user's ID is available in req.user.id from the auth middleware
+
+    try {
+        // Find the user and the course
+        const user = await User.findById(userId);
+        const course = await Course.findById(courseId);
+
+        if (!user) {
+            return res.status(404).json({ message: 'User not found' });
+        }
+
+        if (!course) {
+            return res.status(404).json({ message: 'Course not found' });
+        }
+
+        // Check if the user is enrolled in the course
+        if (!user.enrolledCourses.includes(courseId)) {
+            return res.status(400).json({ message: 'User is not enrolled in this course' });
+        }
+
+        // Remove the course from the user's enrolled courses
+        user.enrolledCourses = user.enrolledCourses.filter(course => course.toString() !== courseId);
+        await user.save();
+
+        // Remove the user from the course's enrolled users
+        course.enrolledUsers = course.enrolledUsers.filter(user => user.toString() !== userId);
+        await course.save();
+
+        res.status(200).json({ message: 'Successfully unenrolled from the course' });
+
+    } catch (error) {
+        console.error('Error unenrolling from the course:', error);
+        res.status(500).json({ message: 'Error unenrolling from the course' });
+    }
+});
 
 
 // Get users enrolled in a specific course
